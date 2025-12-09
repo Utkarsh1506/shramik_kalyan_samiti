@@ -7,6 +7,7 @@ import Button from "@/components/ui/Button";
 import { ArrowRight, Target, Eye, Heart, Shield, Users, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -195,13 +196,17 @@ export default function About() {
             Explore our comprehensive programs, impact data, and partnership opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-ink hover:bg-sand">
-              Explore Programs
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button variant="outline" size="lg" className="text-white border-white hover:bg-white/10">
-              View Impact Data
-            </Button>
+            <Link href="/programs">
+              <Button size="lg" className="bg-white text-ink hover:bg-sand">
+                Explore Programs
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+            <Link href="/certifications">
+              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white/10">
+                View Certifications
+              </Button>
+            </Link>
           </div>
         </Container>
       </Section>

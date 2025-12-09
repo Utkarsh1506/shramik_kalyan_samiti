@@ -13,9 +13,9 @@ const footerLinks = {
   ],
   work: [
     { label: "Programs", href: "/programs" },
-    { label: "Technology", href: "/technology" },
-    { label: "Partners", href: "/partners" },
-    { label: "Resources", href: "/resources" }
+    { label: "Gallery", href: "/gallery" },
+    { label: "Certifications", href: "/certifications" },
+    { label: "Impact", href: "/impact" }
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },

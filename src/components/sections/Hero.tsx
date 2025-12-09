@@ -5,6 +5,7 @@ import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -57,13 +58,17 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="group">
-              Explore Programs
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="lg" className="text-white border-white hover:bg-white/10">
-              Download Concept Note
-            </Button>
+            <Link href="/programs">
+              <Button size="lg" className="group">
+                Explore Programs
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link href="/certifications">
+              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white/10">
+                View Certifications
+              </Button>
+            </Link>
           </div>
 
           <motion.div

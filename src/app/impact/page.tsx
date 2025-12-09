@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import { Metadata } from "next";
 import { TrendingUp, Layers, MapPin, Trophy } from "lucide-react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Impact & Data | Jharkhand Shramik Kalyan Samiti",
@@ -178,9 +179,11 @@ export default function Impact() {
           <p className="text-lg text-sand/90 mb-8 max-w-2xl mx-auto">
             Review our detailed impact reports, business model, and investment opportunities.
           </p>
-          <Button size="lg" className="bg-white text-ink hover:bg-sand">
-            Download Investor Materials
-          </Button>
+          <Link href="https://wa.me/916206490476" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-white text-ink hover:bg-sand">
+              Contact on WhatsApp
+            </Button>
+          </Link>
         </Container>
       </Section>
     </>
