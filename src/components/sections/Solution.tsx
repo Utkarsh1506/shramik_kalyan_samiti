@@ -2,8 +2,10 @@
 
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
+import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
-import { CheckCircle2, Monitor, Heart, BarChart3, Leaf } from "lucide-react";
+import { CheckCircle2, Monitor, Heart, BarChart3, Leaf, ArrowRight, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 const solutions = [
   {
@@ -103,6 +105,31 @@ export default function Solution() {
             })}
           </motion.div>
         </div>
+
+        {/* Action Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center mt-12"
+        >
+          <Link href="/programs">
+            <Button size="lg" className="group">
+              Explore Programs
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="text-ink border-ink hover:bg-ink/5"
+            onClick={() => window.open('https://wa.me/916206490476', '_blank')}
+          >
+            <MessageCircle className="mr-2 w-5 h-5" />
+            Contact on WhatsApp
+          </Button>
+        </motion.div>
       </Container>
     </Section>
   );

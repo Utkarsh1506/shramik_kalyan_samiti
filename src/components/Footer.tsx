@@ -108,7 +108,7 @@ export default function Footer() {
               </li>
               <li className="flex gap-2">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />
-                <span>Jharkhand, India</span>
+                <span>Kanchandih Kapsara Po Mugma<br />Thana: Nirsa, District Dhanbad<br />Jharkhand 828204, India</span>
               </li>
             </ul>
           </div>

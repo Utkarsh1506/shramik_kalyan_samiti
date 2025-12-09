@@ -4,7 +4,7 @@ import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { MessageCircle, Mail } from "lucide-react";
 
 export default function CTA() {
   return (
@@ -25,12 +25,22 @@ export default function CTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group">
-              Partner With Us
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button 
+              size="lg" 
+              className="group"
+              onClick={() => window.location.href = '/contact'}
+            >
+              <Mail className="mr-2 w-5 h-5" />
+              Contact Us
             </Button>
-            <Button variant="outline" size="lg" className="text-white border-white hover:bg-white/10">
-              Request a Consultation
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-white border-white hover:bg-white/10"
+              onClick={() => window.open('https://wa.me/916206490476', '_blank')}
+            >
+              <MessageCircle className="mr-2 w-5 h-5" />
+              WhatsApp
             </Button>
           </div>
 

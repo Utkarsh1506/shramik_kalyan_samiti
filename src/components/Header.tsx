@@ -24,13 +24,14 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-stone/10 shadow-sm">
       <Container>
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center gap-2 font-bold text-sm md:text-base text-ink">
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-moss to-amber rounded-lg flex items-center justify-center text-white font-bold text-xs md:text-sm">
+          <Link href="/" className="flex items-center gap-2 font-bold text-ink hover:opacity-80 transition-opacity">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-moss to-amber rounded-lg flex items-center justify-center text-white font-bold text-sm">
               SK
             </div>
-            <span className="hidden sm:inline leading-tight">
-              SHRAMIK KALYAN<br />SAMITI
-            </span>
+            <div className="hidden sm:inline text-xs md:text-sm leading-tight">
+              <div className="font-bold text-ink">JSKS Trust</div>
+              <div className="text-[10px] md:text-xs text-slate/70 font-medium">Jharkhand Shramik<br />Kalyan Samiti</div>
+            </div>
           </Link>
 
           {/* Desktop Nav */}

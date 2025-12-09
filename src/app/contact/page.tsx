@@ -110,7 +110,9 @@ export default function Contact() {
                     <h3 className="font-bold text-ink mb-1">Address</h3>
                     <p className="text-slate">
                       Jharkhand Shramik Kalyan Samiti<br />
-                      Ranchi, Jharkhand, India
+                      Kanchandih Kapsara Po Mugma<br />
+                      Thana: Nirsa, District Dhanbad<br />
+                      Jharkhand 828204, India
                     </p>
                   </div>
                 </motion.div>
