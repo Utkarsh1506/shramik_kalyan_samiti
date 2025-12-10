@@ -25,8 +25,8 @@ export default function Header() {
       <Container>
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center gap-2 font-bold text-ink hover:opacity-80 transition-opacity">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-moss to-amber rounded-lg flex items-center justify-center text-white font-bold text-sm">
-              SK
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-teal-600 to-teal-700 rounded-lg flex items-center justify-center text-white font-bold text-[10px] md:text-xs leading-tight text-center">
+              <span>JSKS</span>
             </div>
             <div className="hidden sm:inline text-xs md:text-sm leading-tight">
               <div className="font-bold text-ink">JSKS Trust</div>

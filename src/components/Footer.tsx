@@ -34,8 +34,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="w-10 h-10 bg-gradient-to-br from-moss to-amber rounded-lg flex items-center justify-center text-white font-bold mb-4 text-xs">
-              SK
+            <div className="w-10 h-10 bg-gradient-to-br from-teal-600 to-teal-700 rounded-lg flex items-center justify-center text-white font-bold text-[10px] mb-4 leading-tight text-center">
+              <span>JSKS</span>
             </div>
             <h3 className="font-bold text-lg mb-2">Shramik Kalyan Samiti</h3>
             <p className="text-sand/70 text-sm leading-relaxed">
@@ -120,13 +120,10 @@ export default function Footer() {
             <p>&copy; {currentYear} Jharkhand Shramik Kalyan Samiti Trust. All rights reserved.</p>
             <div className="flex flex-col md:flex-row md:justify-end gap-4">
               <p>
-                <span className="font-semibold">NGO Reg.:</span> [Registration Number]
+                <span className="font-semibold">NGO DARPAN:</span> JH/2025/0615181
               </p>
               <p>
-                <span className="font-semibold">PAN:</span> [PAN Number]
-              </p>
-              <p>
-                <span className="font-semibold">12A/80G:</span> [80G No.]
+                <span className="font-semibold">PAN:</span> AAFTJ0785J
               </p>
             </div>
           </div>

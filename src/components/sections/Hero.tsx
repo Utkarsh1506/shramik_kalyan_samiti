@@ -20,13 +20,13 @@ export default function Hero() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-ink/90 via-midnight/85 to-ink/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-900/85 via-teal-950/80 to-teal-900/85" />
       </div>
       {/* Background mesh animation */}
       <div className="absolute inset-0 opacity-30 z-[1]">
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-moss/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-amber/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: "1s"}}></div>
-        <div className="absolute top-1/2 right-1/3 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: "2s"}}></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-teal-500/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: "1s"}}></div>
+        <div className="absolute top-1/2 right-1/3 w-72 h-72 bg-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: "2s"}}></div>
       </div>
 
       <Container className="relative z-10">
@@ -49,7 +49,7 @@ export default function Hero() {
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight">
             Rebuilding Mining with{" "}
-            <span className="bg-gradient-to-r from-amber to-yellow-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-300 to-emerald-300 bg-clip-text text-transparent">
               Compliance, Health & Dignity
             </span>
           </h1>
@@ -86,9 +86,9 @@ export default function Hero() {
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center hover:border-white/40 transition-colors"
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center hover:border-cyan-300/60 transition-colors"
               >
-                <p className="text-2xl md:text-3xl font-bold text-amber">{stat.value}</p>
+                <p className="text-2xl md:text-3xl font-bold text-cyan-300">{stat.value}</p>
                 <p className="text-sm text-sand/80 mt-2">{stat.label}</p>
               </motion.div>
             ))}

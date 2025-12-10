@@ -11,35 +11,45 @@ export const metadata: Metadata = {
 
 const resources = [
   {
+    category: "NGO Certifications & Registration",
+    items: [
+      { title: "NITI AAYOG Certificate", year: "2025", type: "PDF", size: "1.2 MB", file: "NITI AAYOG CERTIFICATE_JHARKHAND SHRAMIK KALYAN SAMITY TRUST.pdf" },
+      { title: "E-ANUDAN Certificate", year: "2025", type: "PDF", size: "1.1 MB", file: "E-ANUDAN CERTIFICATE_JHARKHAND SHRAMIK KALYAN SAMITY TRUST.pdf" },
+      { title: "Trust Deed", year: "2024", type: "PDF", size: "2.3 MB", file: "Trust Deed.pdf" },
+      { title: "Udyam Adhaar Registration", year: "2024", type: "PDF", size: "0.9 MB", file: "Udyam Adhaar.pdf" }
+    ]
+  },
+  {
+    category: "Financial & Tax Documents",
+    items: [
+      { title: "Income Tax Return (ITR)", year: "2024", type: "PDF", size: "1.8 MB", file: "ITR .pdf" },
+      { title: "Computation of Total Income", year: "2024", type: "PDF", size: "1.5 MB", file: "Computation Of Total Income.pdf" },
+      { title: "CSR Approval Letter - Form CSR1", year: "2024", type: "PDF", size: "1.2 MB", file: "Approval Letter for form CSR1.PDF" },
+      { title: "10AC Form (Section 10AC)", year: "2024", type: "PDF", size: "0.8 MB", file: "10AC.pdf" }
+    ]
+  },
+  {
     category: "Annual Reports",
     items: [
-      { title: "Annual Report 2023-24", year: "2024", type: "PDF", size: "2.4 MB" },
-      { title: "Annual Report 2022-23", year: "2023", type: "PDF", size: "2.1 MB" },
-      { title: "Annual Report 2021-22", year: "2022", type: "PDF", size: "1.9 MB" }
+      { title: "Annual Report 2023-24", year: "2024", type: "PDF", size: "2.4 MB", file: undefined },
+      { title: "Annual Report 2022-23", year: "2023", type: "PDF", size: "2.1 MB", file: undefined },
+      { title: "Annual Report 2021-22", year: "2022", type: "PDF", size: "1.9 MB", file: undefined }
     ]
   },
   {
     category: "Impact Reports",
     items: [
-      { title: "Health Program Impact 2024", year: "2024", type: "PDF", size: "1.8 MB" },
-      { title: "Environmental Restoration 2024", year: "2024", type: "PDF", size: "1.5 MB" },
-      { title: "Community Rehabilitation Study 2023", year: "2023", type: "PDF", size: "2.2 MB" }
+      { title: "Health Program Impact 2024", year: "2024", type: "PDF", size: "1.8 MB", file: undefined },
+      { title: "Environmental Restoration 2024", year: "2024", type: "PDF", size: "1.5 MB", file: undefined },
+      { title: "Community Rehabilitation Study 2023", year: "2023", type: "PDF", size: "2.2 MB", file: undefined }
     ]
   },
   {
     category: "Policy Briefs",
     items: [
-      { title: "Illegal Mining in Jharkhand: Challenges & Solutions", year: "2024", type: "PDF", size: "1.2 MB" },
-      { title: "Occupational Health in Mining: Framework for Action", year: "2023", type: "PDF", size: "1.4 MB" },
-      { title: "Environmental Restoration Best Practices", year: "2023", type: "PDF", size: "1.1 MB" }
-    ]
-  },
-  {
-    category: "Compliance Documents",
-    items: [
-      { title: "Privacy Policy", year: "2024", type: "PDF", size: "0.8 MB" },
-      { title: "Financial Transparency Report", year: "2024", type: "PDF", size: "1.3 MB" },
-      { title: "Major Donors List (FY 2023-24)", year: "2024", type: "PDF", size: "0.5 MB" }
+      { title: "Illegal Mining in Jharkhand: Challenges & Solutions", year: "2024", type: "PDF", size: "1.2 MB", file: undefined },
+      { title: "Occupational Health in Mining: Framework for Action", year: "2023", type: "PDF", size: "1.4 MB", file: undefined },
+      { title: "Environmental Restoration Best Practices", year: "2023", type: "PDF", size: "1.1 MB", file: undefined }
     ]
   }
 ];
@@ -82,10 +92,17 @@ export default function Resources() {
                             {item.size}
                           </span>
                         </div>
-                        <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-moss/10 text-moss font-semibold rounded-lg hover:bg-moss/20 transition-colors">
-                          <Download className="w-4 h-4" />
-                          Download
-                        </button>
+                        {item.file ? (
+                          <a href={`/${item.file}`} download className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-moss to-amber text-white font-semibold rounded-lg hover:from-amber hover:to-moss transition-all shadow-md">
+                            <Download className="w-4 h-4" />
+                            Download
+                          </a>
+                        ) : (
+                          <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-moss to-amber text-white font-semibold rounded-lg hover:from-amber hover:to-moss transition-all shadow-md">
+                            <Download className="w-4 h-4" />
+                            Coming Soon
+                          </button>
+                        )}
                       </CardContent>
                     </Card>
                   ))}
@@ -95,25 +112,25 @@ export default function Resources() {
           </div>
 
           {/* Information Note */}
-          <div className="mt-16 bg-sky/30 rounded-2xl p-8 border border-moss/20">
-            <h2 className="text-xl font-bold text-ink mb-4">NGO Compliance & Registration</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate">
-              <div>
-                <p className="font-semibold text-ink mb-2">Official Registrations:</p>
-                <ul className="space-y-1 text-sm">
-                  <li>NGO Registration: [REG. NO. - Under 12A/80G]</li>
-                  <li>UDYAM/MSME: [UDYAM ID]</li>
-                  <li>PAN: [PAN NUMBER]</li>
-                  <li>80G Recognition: [80G CERT NO.]</li>
+          <div className="mt-16 bg-gradient-to-br from-sky/40 via-sky/20 to-white rounded-2xl p-8 border border-moss/20">
+            <h2 className="text-2xl font-bold text-ink mb-6">NGO Compliance & Registration Details</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate">
+              <div className="bg-white/70 rounded-xl p-6 border border-moss/10">
+                <p className="font-bold text-ink mb-4">Official Registrations:</p>
+                <ul className="space-y-2 text-sm">
+                  <li><span className="font-semibold text-ink">NGO DARPAN ID:</span> JH/2025/0615181</li>
+                  <li><span className="font-semibold text-ink">PAN:</span> AAFTJ0785J</li>
+                  <li><span className="font-semibold text-ink">UDYAM Registration:</span> Active</li>
+                  <li><span className="font-semibold text-ink">NITI AAYOG Registered:</span> Yes</li>
                 </ul>
               </div>
-              <div>
-                <p className="font-semibold text-ink mb-2">Audits & Compliance:</p>
-                <ul className="space-y-1 text-sm">
-                  <li>Annual Audits: Conducted by [Auditor Name]</li>
-                  <li>CSR Certification: [CSR STATUS]</li>
-                  <li>Regulatory Status: [STATUS]</li>
-                  <li>Last Updated: December 2024</li>
+              <div className="bg-white/70 rounded-xl p-6 border border-moss/10">
+                <p className="font-bold text-ink mb-4">Certifications & Status:</p>
+                <ul className="space-y-2 text-sm">
+                  <li><span className="font-semibold text-ink">E-ANUDAN:</span> Certified</li>
+                  <li><span className="font-semibold text-ink">CSR Eligible:</span> Form CSR-1 Approved</li>
+                  <li><span className="font-semibold text-ink">Tax Status:</span> ITR Filed</li>
+                  <li><span className="font-semibold text-ink">Last Updated:</span> December 2024</li>
                 </ul>
               </div>
             </div>
