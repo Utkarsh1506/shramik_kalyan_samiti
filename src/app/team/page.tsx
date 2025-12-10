@@ -1,13 +1,17 @@
+"use client";
+
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import { Card, CardContent, CardHeader } from "@/components/ui/Card";
 import { Metadata } from "next";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-export const metadata: Metadata = {
-  title: "Team | Jharkhand Shramik Kalyan Samiti",
-  description: "Meet the leadership team driving mining sector transformation and community welfare."
-};
+// Note: metadata removed due to client component requirement
+// export const metadata: Metadata = {
+//   title: "Team | Jharkhand Shramik Kalyan Samiti",
+//   description: "Meet the leadership team driving mining sector transformation and community welfare."
+// };
 
 const team = [
   {
@@ -68,28 +72,40 @@ export default function Team() {
       </Section>
 
       {/* Team Grid */}
-      <Section className="bg-white">
+      <Section className="bg-gradient-to-b from-white via-sky/10 to-white">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, idx) => (
-              <Card key={idx} hover className="overflow-hidden">
-                <div className="relative w-full h-64 bg-gradient-to-br from-moss to-amber">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <CardHeader>
-                  <h3 className="text-lg font-bold text-ink">{member.name}</h3>
-                  <p className="text-sm text-moss font-semibold">{member.role}</p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate text-sm leading-relaxed">{member.expertise}</p>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <Card hover className="overflow-hidden h-full bg-gradient-to-br from-white to-sky/5">
+                  <div className="relative w-full h-72 bg-gradient-to-br from-moss to-amber overflow-hidden">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover hover:scale-110 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></div>
+                  </div>
+                  <CardHeader className="relative -mt-16 z-10">
+                    <div className="mb-2">
+                      <h3 className="text-xl font-bold text-white drop-shadow-lg">{member.name}</h3>
+                      <p className="text-sm font-bold bg-gradient-to-r from-amber to-yellow-400 bg-clip-text text-transparent">{member.role}</p>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pt-2">
+                    <p className="text-slate text-sm leading-relaxed">{member.expertise}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
 

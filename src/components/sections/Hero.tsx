@@ -23,9 +23,10 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-ink/90 via-midnight/85 to-ink/90" />
       </div>
       {/* Background mesh animation */}
-      <div className="absolute inset-0 opacity-20 z-[1]">
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-moss/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-amber/20 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-30 z-[1]">
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-moss/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-amber/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: "1s"}}></div>
+        <div className="absolute top-1/2 right-1/3 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: "2s"}}></div>
       </div>
 
       <Container className="relative z-10">
@@ -59,13 +60,13 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/programs">
-              <Button size="lg" className="group">
+              <Button size="lg" className="group shadow-lg hover:shadow-2xl">
                 Explore Programs
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </Button>
             </Link>
             <Link href="/certifications">
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white/10">
+              <Button variant="outline" size="lg" className="text-white border-white/80 hover:bg-white/20 shadow-lg hover:shadow-2xl hover:border-white">
                 View Certifications
               </Button>
             </Link>
@@ -77,18 +78,20 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-amber">20%</p>
-              <p className="text-sm text-sand/70">of India's illegal mining cases</p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-amber">5,000+</p>
-              <p className="text-sm text-sand/70">annual violations monitored</p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-amber">15,000+</p>
-              <p className="text-sm text-sand/70">families in focus area</p>
-            </div>
+            {[
+              { value: "20%", label: "of India's illegal mining cases" },
+              { value: "5,000+", label: "annual violations monitored" },
+              { value: "15,000+", label: "families in focus area" }
+            ].map((stat, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.05 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center hover:border-white/40 transition-colors"
+              >
+                <p className="text-2xl md:text-3xl font-bold text-amber">{stat.value}</p>
+                <p className="text-sm text-sand/80 mt-2">{stat.label}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
       </Container>

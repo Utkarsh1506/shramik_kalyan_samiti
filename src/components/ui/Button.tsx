@@ -20,12 +20,12 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-ink text-white hover:bg-midnight hover:shadow-soft active:scale-95",
+      "bg-gradient-to-r from-ink to-midnight text-white hover:from-midnight hover:to-ink hover:shadow-lg shadow-md active:scale-95",
     secondary:
-      "bg-moss text-white hover:bg-amber hover:text-ink active:scale-95",
+      "bg-gradient-to-r from-moss to-amber text-white hover:from-amber hover:to-moss hover:shadow-lg shadow-md active:scale-95",
     outline:
-      "border-2 border-ink text-ink hover:bg-sky hover:border-midnight active:scale-95",
-    ghost: "text-ink hover:bg-stone/30 active:scale-95"
+      "border-2 border-ink text-ink hover:bg-gradient-to-r hover:from-sky hover:to-sky/50 hover:border-moss hover:shadow-lg active:scale-95",
+    ghost: "text-ink hover:bg-gradient-to-r hover:from-stone/10 hover:to-stone/20 active:scale-95"
   };
 
   const sizes = {

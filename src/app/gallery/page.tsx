@@ -99,21 +99,23 @@ export default function GalleryPage() {
       </Section>
 
       {/* Filter Section */}
-      <Section className="bg-sky/30 py-8">
+      <Section className="bg-gradient-to-b from-sky/30 via-sky/20 to-white py-8">
         <Container>
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
-              <button
+              <motion.button
                 key={category}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all ${
+                className={`px-6 py-3 rounded-full font-semibold transition-all ${
                   selectedCategory === category
-                    ? 'bg-moss text-white shadow-md scale-105'
-                    : 'bg-white text-ink hover:bg-moss/10 border border-moss/20'
+                    ? 'bg-gradient-to-r from-moss to-amber text-white shadow-lg scale-105'
+                    : 'bg-white text-ink hover:bg-gradient-to-r hover:from-sky hover:to-sky/50 border border-moss/20 shadow-sm hover:shadow-md'
                 }`}
               >
                 {category}
-              </button>
+              </motion.button>
             ))}
           </div>
         </Container>
@@ -133,21 +135,21 @@ export default function GalleryPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3, delay: index * 0.03 }}
-                className="relative aspect-square cursor-pointer group overflow-hidden rounded-xl shadow-card hover:shadow-xl transition-all"
+                transition={{ duration: 0.3, delay: index * 0.02 }}
+                className="relative aspect-square cursor-pointer group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all"
                 onClick={() => setSelectedImage(image.src)}
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-500 group-hover:scale-125"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <span className="inline-block px-3 py-1 bg-amber text-white text-xs font-semibold rounded-full">
+                    <span className="inline-block px-3 py-1 bg-gradient-to-r from-amber to-yellow-400 text-ink text-xs font-bold rounded-full">
                       {image.category}
                     </span>
                   </div>
