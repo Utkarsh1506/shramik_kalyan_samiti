@@ -14,43 +14,43 @@ const team = [
     name: "Neelima Tripathi",
     role: "President",
     expertise: "15+ years in mining compliance, environmental policy, and NGO leadership.",
-    image: "/IMG-20251208-WA0011.jpg"
+    image: "/Neelima Tripathi - President.png"
   },
   {
     name: "Upendra Nath Pathak",
     role: "Trustee",
     expertise: "Mining sector expert with deep government and industry relationships.",
-    image: "/IMG-20251208-WA0015.jpg"
+    image: "/Upendra Nath Pathak - Trustee.png"
   },
   {
     name: "Nooresa Khatoon",
     role: "Trustee",
     expertise: "Community development specialist and women's welfare advocate.",
-    image: "/IMG-20251208-WA0020.jpg"
+    image: "/Nooresa Khaatoon - Trustee.png"
   },
   {
     name: "Md Ali Ansari",
     role: "Vice President",
     expertise: "10+ years in occupational health, health program design, and field operations.",
-    image: "/IMG-20251208-WA0026.jpg"
+    image: "/Md Ali Ansari - Trustee.png"
   },
   {
     name: "Lalbabu Yadav",
     role: "Trustee",
     expertise: "Environmental scientist and conservation program manager.",
-    image: "/IMG-20251208-WA0031.jpg"
+    image: "/Lalbabu Yadav - Trustee.png"
   },
   {
     name: "Sajjad Ansari",
     role: "Trustee",
     expertise: "Technology and digital transformation in social sector.",
-    image: "/IMG-20251208-WA0040.jpg"
+    image: "/Sajjad Ansari - Vice President.png"
   },
   {
     name: "Mtiaz Khan",
     role: "Secretary cum Treasurer",
     expertise: "Financial management, compliance, and administrative oversight.",
-    image: "/IMG-20251208-WA0052.jpg"
+    image: "/Mtiaz Ali - Secretary Cum. Treasurer.png"
   }
 ];
 
