@@ -2,6 +2,7 @@ import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import { Card, CardContent, CardHeader } from "@/components/ui/Card";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Team | Jharkhand Shramik Kalyan Samiti",
@@ -12,37 +13,44 @@ const team = [
   {
     name: "Neelima Tripathi",
     role: "President",
-    expertise: "15+ years in mining compliance, environmental policy, and NGO leadership."
+    expertise: "15+ years in mining compliance, environmental policy, and NGO leadership.",
+    image: "/IMG-20251208-WA0011.jpg"
   },
   {
     name: "Upendra Nath Pathak",
     role: "Trustee",
-    expertise: "Mining sector expert with deep government and industry relationships."
+    expertise: "Mining sector expert with deep government and industry relationships.",
+    image: "/IMG-20251208-WA0015.jpg"
   },
   {
     name: "Nooresa Khatoon",
     role: "Trustee",
-    expertise: "Community development specialist and women's welfare advocate."
+    expertise: "Community development specialist and women's welfare advocate.",
+    image: "/IMG-20251208-WA0020.jpg"
   },
   {
     name: "Md Ali Ansari",
     role: "Vice President",
-    expertise: "10+ years in occupational health, health program design, and field operations."
+    expertise: "10+ years in occupational health, health program design, and field operations.",
+    image: "/IMG-20251208-WA0026.jpg"
   },
   {
     name: "Lalbabu Yadav",
     role: "Trustee",
-    expertise: "Environmental scientist and conservation program manager."
+    expertise: "Environmental scientist and conservation program manager.",
+    image: "/IMG-20251208-WA0031.jpg"
   },
   {
     name: "Sajjad Ansari",
     role: "Trustee",
-    expertise: "Technology and digital transformation in social sector."
+    expertise: "Technology and digital transformation in social sector.",
+    image: "/IMG-20251208-WA0040.jpg"
   },
   {
     name: "Mtiaz Khan",
     role: "Secretary cum Treasurer",
-    expertise: "Financial management, compliance, and administrative oversight."
+    expertise: "Financial management, compliance, and administrative oversight.",
+    image: "/IMG-20251208-WA0052.jpg"
   }
 ];
 
@@ -64,11 +72,17 @@ export default function Team() {
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, idx) => (
-              <Card key={idx} hover>
+              <Card key={idx} hover className="overflow-hidden">
+                <div className="relative w-full h-64 bg-gradient-to-br from-moss to-amber">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-br from-moss to-amber rounded-lg flex items-center justify-center text-white font-bold text-xl mb-4">
-                    {member.name.split(" ").map(n => n[0]).join("")}
-                  </div>
                   <h3 className="text-lg font-bold text-ink">{member.name}</h3>
                   <p className="text-sm text-moss font-semibold">{member.role}</p>
                 </CardHeader>

@@ -48,13 +48,19 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2 md:gap-4">
-            <Button
-              variant="secondary"
-              size="sm"
-              className="hidden sm:inline-flex text-xs md:text-sm"
+            <Link
+              href="https://wa.me/916206490476?text=Hello%2C%20I%20want%20to%20donate%20for%20your%20trust"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Donate
-            </Button>
+              <Button
+                variant="secondary"
+                size="sm"
+                className="hidden sm:inline-flex text-xs md:text-sm"
+              >
+                Donate
+              </Button>
+            </Link>
 
             {/* Mobile menu button */}
             <button
@@ -82,9 +88,16 @@ export default function Header() {
               </Link>
             ))}
             <div className="px-4 py-3">
-              <Button variant="secondary" className="w-full text-sm">
-                Donate Now
-              </Button>
+              <Link
+                href="https://wa.me/916206490476?text=Hello%2C%20I%20want%20to%20donate%20for%20your%20trust"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Button variant="secondary" className="w-full text-sm">
+                  Donate Now
+                </Button>
+              </Link>
             </div>
           </nav>
         )}
