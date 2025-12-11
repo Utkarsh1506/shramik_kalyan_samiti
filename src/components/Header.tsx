@@ -24,15 +24,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-stone/10 shadow-sm">
       <Container>
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center gap-3 font-bold text-ink hover:opacity-80 transition-opacity">
-            <div className="relative w-10 h-10 md:w-12 md:h-12 flex-shrink-0">
+        <div className="flex items-center justify-between h-20 md:h-24">
+          <Link href="/" className="flex items-center gap-2 font-bold text-ink hover:opacity-85 transition-opacity">
+            <div className="relative w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
               <Image
                 src="/logo.jpg"
                 alt="JSKS Logo"
                 fill
                 className="object-contain"
-                sizes="48px"
+                priority
+                sizes="80px"
               />
             </div>
             <div className="hidden sm:inline text-xs md:text-sm leading-tight">

@@ -35,13 +35,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="relative w-12 h-12 mb-4 flex-shrink-0">
+            <div className="relative w-16 h-16 mb-4 flex-shrink-0">
               <Image
                 src="/logo.jpg"
                 alt="JSKS Logo"
                 fill
                 className="object-contain"
-                sizes="48px"
+                sizes="64px"
               />
             </div>
             <h3 className="font-bold text-lg mb-2">Shramik Kalyan Samiti</h3>
