@@ -49,7 +49,7 @@ const businessModel = [
   },
   {
     title: "Key Partnerships",
-    items: ["Coal India Limited", "Maithan Power", "Damodar Valley Corporation", "State departments"]
+    items: ["Coal India Limited", "Maithan Power Limited", "Damodar Valley Corporation", "State departments"]
   }
 ];
 
