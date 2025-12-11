@@ -74,7 +74,18 @@ const galleryImages = [
   { src: '/IMG-20251208-WA0076.jpg', alt: 'Health initiative', category: 'Health' },
   { src: '/IMG-20251208-WA0077.jpg', alt: 'Green initiative', category: 'Environment' },
   { src: '/IMG-20251208-WA0079.jpg', alt: 'Worker program', category: 'Programs' },
-  { src: '/IMG-20251208-WA0083.jpg', alt: 'Education program', category: 'Training' }
+  { src: '/IMG-20251208-WA0083.jpg', alt: 'Education program', category: 'Training' },
+  { src: '/WhatsApp Image 2025-12-11 .jpeg', alt: 'Community welfare initiative', category: 'Community' },
+  { src: '/WhatsApp Image 2025-12-11 at 9.00.32 PM.jpeg', alt: 'Health awareness session', category: 'Health' },
+  { src: '/WhatsApp Image 2025-12-11 at 9.00.36 PM.jpeg', alt: 'Environmental restoration drive', category: 'Environment' },
+  { src: '/WhatsApp Image 2025-12-11 at 9.01.14 PM.jpeg', alt: 'Training workshop for workers', category: 'Training' },
+  { src: '/WhatsApp Image 2025-12-11 at 9.01.32 PM.jpeg', alt: 'Worker support program', category: 'Programs' },
+  { src: '/WhatsApp Image 2025-12-11 at 9.01.34 PM.jpeg', alt: 'Community gathering and engagement', category: 'Community' },
+  { src: '/WhatsApp Image 2025-12-11 at 9.01.36 PM.jpeg', alt: 'Medical health camp', category: 'Health' },
+  { src: '/WhatsApp Image 2025-12-11 at 9.01.40 PM.jpeg', alt: 'Green initiative and eco restoration', category: 'Environment' },
+  { src: '/WhatsApp Image 2025-12-11 at 9.01.43 PM.jpeg', alt: 'Skills development program', category: 'Training' },
+  { src: '/WhatsApp Image 2025-12-11 at 9.02.50 PM.jpeg', alt: 'Community outreach activity', category: 'Programs' },
+  { src: '/WhatsApp Image 2025-12-11 at 9.02.51 PM.jpeg', alt: 'Welfare support initiative', category: 'Community' }
 ];
 
 const categories = ['All', 'Programs', 'Health', 'Community', 'Environment', 'Training'];
