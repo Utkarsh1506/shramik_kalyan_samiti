@@ -5,6 +5,7 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -24,9 +25,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-stone/10 shadow-sm">
       <Container>
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center gap-2 font-bold text-ink hover:opacity-80 transition-opacity">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-teal-600 to-teal-700 rounded-lg flex items-center justify-center text-white font-bold text-[10px] md:text-xs leading-tight text-center">
-              <span>JSKS</span>
+          <Link href="/" className="flex items-center gap-3 font-bold text-ink hover:opacity-80 transition-opacity">
+            <div className="relative w-10 h-10 md:w-12 md:h-12 flex-shrink-0">
+              <Image
+                src="/logo.jpg"
+                alt="JSKS Logo"
+                fill
+                className="object-contain"
+                sizes="48px"
+              />
             </div>
             <div className="hidden sm:inline text-xs md:text-sm leading-tight">
               <div className="font-bold text-ink">JSKS Trust</div>

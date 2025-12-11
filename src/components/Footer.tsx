@@ -3,6 +3,7 @@
 import Container from "@/components/ui/Container";
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 
 const footerLinks = {
   company: [
@@ -34,8 +35,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="w-10 h-10 bg-gradient-to-br from-teal-600 to-teal-700 rounded-lg flex items-center justify-center text-white font-bold text-[10px] mb-4 leading-tight text-center">
-              <span>JSKS</span>
+            <div className="relative w-12 h-12 mb-4 flex-shrink-0">
+              <Image
+                src="/logo.jpg"
+                alt="JSKS Logo"
+                fill
+                className="object-contain"
+                sizes="48px"
+              />
             </div>
             <h3 className="font-bold text-lg mb-2">Shramik Kalyan Samiti</h3>
             <p className="text-sand/70 text-sm leading-relaxed">
