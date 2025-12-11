@@ -65,6 +65,15 @@ export default function Hero() {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </Button>
             </Link>
+            <Link 
+              href="https://wa.me/916206490476?text=Hello%2C%20I%20want%20to%20donate%20for%20your%20trust"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="secondary" size="lg" className="shadow-lg hover:shadow-2xl">
+                Donate Now
+              </Button>
+            </Link>
             <Link href="/certifications">
               <Button variant="outline" size="lg" className="text-white border-white/80 hover:bg-white/20 shadow-lg hover:shadow-2xl hover:border-white">
                 View Certifications
