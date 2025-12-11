@@ -167,7 +167,7 @@ export default function About() {
               {
                 title: "Structured Partnerships",
                 description:
-                  "Collaborations with Coal India, Tata Power, government agencies, and community organizations."
+                  "Collaborations with Coal India, Maithan Power, government agencies, and community organizations."
               },
               {
                 title: "Impact-Focused",
