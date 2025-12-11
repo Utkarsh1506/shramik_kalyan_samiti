@@ -53,7 +53,7 @@ export default function CTA() {
           >
             <p className="text-sand/70 text-sm mb-6">Trusted by leading organizations</p>
             <div className="flex flex-wrap justify-center gap-8 md:gap-12 items-center">
-              {["Coal India Limited", "Maithan Power", "Valley Corporation", "State Govt."].map(
+              {["Coal India Limited", "Maithan Power", "Damodar Valley Corporation", "State Govt."].map(
                 (partner, idx) => (
                   <div key={idx} className="text-sand/60 font-medium text-sm">
                     {partner}
