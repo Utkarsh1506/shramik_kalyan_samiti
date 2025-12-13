@@ -5,8 +5,8 @@ export const organizationSchema: WithContext<Organization> = {
   '@type': 'Organization',
   name: 'Jharkhand Shramik Kalyan Samiti',
   alternateName: 'JSKS Trust',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://shramik-kalyan-samiti.vercel.app',
-  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://shramik-kalyan-samiti.vercel.app'}/logo.png`,
+  url: 'https://jskstrust.org',
+  logo: 'https://jskstrust.org/logo.png',
   description: 'A compliance-driven welfare and technology organization serving mining sector workers in Jharkhand, India.',
   foundingDate: '2020',
   foundingLocation: {

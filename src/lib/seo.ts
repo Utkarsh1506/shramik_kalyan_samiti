@@ -17,7 +17,7 @@ export function generateSEO({
   noIndex = false,
   canonical,
 }: SEOProps): Metadata {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://shramik-kalyan-samiti.vercel.app';
+  const baseUrl = 'https://jskstrust.org';
   const defaultTitle = 'Jharkhand Shramik Kalyan Samiti';
   const defaultDescription = 'Technology-driven compliance and welfare programs for mining sector workers in Jharkhand, India.';
   
