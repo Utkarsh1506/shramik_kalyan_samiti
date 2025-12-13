@@ -2,32 +2,84 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { organizationSchema } from "@/lib/structured-data";
 import "@/styles/globals.css";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
 export const metadata: Metadata = {
-  title: "Jharkhand Shramik Kalyan Samiti - Compliance-Driven Mining Welfare Solutions",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://shramik-kalyan-samiti.vercel.app'),
+  title: {
+    default: "Jharkhand Shramik Kalyan Samiti - Compliance-Driven Mining Welfare Solutions",
+    template: "%s | Jharkhand Shramik Kalyan Samiti"
+  },
   description:
-    "Jharkhand Shramik Kalyan Samiti Trust: Improving mining sector practices with technology-enabled compliance and welfare programs.",
+    "Jharkhand Shramik Kalyan Samiti Trust: Improving mining sector practices with technology-enabled compliance and welfare programs. Empowering workers through CSR initiatives.",
   keywords: [
-    "NGO",
-    "Mining",
-    "Compliance",
-    "Welfare",
-    "Jharkhand",
-    "CSR",
-    "Workers"
+    "NGO Jharkhand",
+    "Mining Welfare",
+    "Mining Compliance",
+    "CSR Programs",
+    "Workers Welfare",
+    "Jharkhand NGO",
+    "Mining Safety",
+    "Labour Welfare",
+    "MMDR Compliance",
+    "Shramik Kalyan",
+    "Mining CSR",
+    "Worker Rights India"
   ],
+  authors: [{ name: "Jharkhand Shramik Kalyan Samiti" }],
+  creator: "Jharkhand Shramik Kalyan Samiti",
+  publisher: "Jharkhand Shramik Kalyan Samiti",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "/",
     title: "Jharkhand Shramik Kalyan Samiti - Building Safer Mining Communities",
     description:
-      "Technology-driven compliance and welfare trust for mining sector in Jharkhand, India.",
-    type: "website"
+      "Technology-driven compliance and welfare trust for mining sector in Jharkhand, India. Empowering workers through education, healthcare, and sustainable development.",
+    siteName: "Jharkhand Shramik Kalyan Samiti",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Jharkhand Shramik Kalyan Samiti - Mining Welfare Trust",
+      },
+    ],
   },
-  robots: "index, follow",
-  authors: [{ name: "Jharkhand Shramik Kalyan Samiti" }],
-  creator: "Jharkhand Shramik Kalyan Samiti"
+  twitter: {
+    card: "summary_large_image",
+    title: "Jharkhand Shramik Kalyan Samiti - Mining Welfare Trust",
+    description:
+      "Technology-driven compliance and welfare programs for mining sector workers in Jharkhand, India.",
+    images: ["/twitter-image.jpg"],
+    creator: "@jskstrust",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
@@ -37,6 +89,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body className={manrope.variable}>
         <a href="#main" className="sr-only">
           Skip to main content
