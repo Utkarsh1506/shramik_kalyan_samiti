@@ -34,7 +34,7 @@ const team = [
   },
   {
     name: "Md Ali Ansari",
-    role: "Vice President",
+    role: "Trustee",
     expertise: "10+ years in occupational health, health program design, and field operations.",
     image: "/Md Ali Ansari - Trustee.png"
   },
@@ -46,7 +46,7 @@ const team = [
   },
   {
     name: "Sajjad Ansari",
-    role: "Trustee",
+    role: "Vice President",
     expertise: "Technology and digital transformation in social sector.",
     image: "/Sajjad Ansari - Vice President.png"
   },
