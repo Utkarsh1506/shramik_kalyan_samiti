@@ -16,19 +16,19 @@ export default function Icon() {
     (
       <div
         style={{
-          fontSize: 20,
-          background: '#1e40af',
+          fontSize: 24,
+          fontWeight: 'bold',
+          background: 'linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           color: 'white',
-          fontWeight: 'bold',
-          borderRadius: '4px',
+          borderRadius: '50%',
         }}
       >
-        J
+        JS
       </div>
     ),
     {
