@@ -85,7 +85,12 @@ const galleryImages = [
   { src: '/WhatsApp Image 2025-12-11 at 9.01.40 PM.jpeg', alt: 'Green initiative and eco restoration', category: 'Environment' },
   { src: '/WhatsApp Image 2025-12-11 at 9.01.43 PM.jpeg', alt: 'Skills development program', category: 'Training' },
   { src: '/WhatsApp Image 2025-12-11 at 9.02.50 PM.jpeg', alt: 'Community outreach activity', category: 'Programs' },
-  { src: '/WhatsApp Image 2025-12-11 at 9.02.51 PM.jpeg', alt: 'Welfare support initiative', category: 'Community' }
+  { src: '/WhatsApp Image 2025-12-11 at 9.02.51 PM.jpeg', alt: 'Welfare support initiative', category: 'Community' },
+  { src: '/img.jpeg', alt: 'Worker health checkup camp', category: 'Health' },
+  { src: '/img1 (2).jpeg', alt: 'Environmental cleanup drive', category: 'Environment' },
+  { src: '/img1.jpeg', alt: 'Vocational training session', category: 'Training' },
+  { src: '/img3.jpeg', alt: 'Community development meeting', category: 'Community' }
+
 ];
 
 const categories = ['All', 'Programs', 'Health', 'Community', 'Environment', 'Training'];
