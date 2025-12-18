@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { organizationSchema } from "@/lib/structured-data";
+import { organizationSchema, websiteSchema } from "@/lib/structured-data";
 import "@/styles/globals.css";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
@@ -10,24 +10,31 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 export const metadata: Metadata = {
   metadataBase: new URL('https://jskstrust.org'),
   title: {
-    default: "Jharkhand Shramik Kalyan Samiti - Compliance-Driven Mining Welfare Solutions",
-    template: "%s | Jharkhand Shramik Kalyan Samiti"
+    default: "JSKS Trust - Jharkhand Shramik Kalyan Samiti | Mining Welfare & CSR Programs",
+    template: "%s | JSKS Trust"
   },
   description:
-    "Jharkhand Shramik Kalyan Samiti Trust: Improving mining sector practices with technology-enabled compliance and welfare programs. Empowering workers through CSR initiatives.",
+    "Official website of Jharkhand Shramik Kalyan Samiti (JSKS Trust). Leading NGO providing mining welfare, CSR programs, worker safety, and compliance solutions in Jharkhand. NGO DARPAN ID: JH/2025/0615181. Donate now for worker welfare.",
   keywords: [
+    "JSKS Trust",
+    "Jharkhand Shramik Kalyan Samiti",
     "NGO Jharkhand",
-    "Mining Welfare",
-    "Mining Compliance",
-    "CSR Programs",
-    "Workers Welfare",
-    "Jharkhand NGO",
-    "Mining Safety",
-    "Labour Welfare",
+    "Mining Welfare Jharkhand",
+    "Mining Compliance India",
+    "CSR Programs Mining",
+    "Workers Welfare Jharkhand",
+    "Donate Mining Workers",
+    "Jharkhand NGO Trust",
+    "Mining Safety Programs",
+    "Labour Welfare India",
     "MMDR Compliance",
-    "Shramik Kalyan",
-    "Mining CSR",
-    "Worker Rights India"
+    "Shramik Kalyan Samiti",
+    "Mining CSR Jharkhand",
+    "Worker Rights India",
+    "NGO DARPAN JH/2025/0615181",
+    "Coal Mining Welfare",
+    "Maithan Power Limited CSR",
+    "Coal India CSR Partner"
   ],
   authors: [{ name: "Jharkhand Shramik Kalyan Samiti" }],
   creator: "Jharkhand Shramik Kalyan Samiti",
@@ -40,26 +47,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "/",
-    title: "Jharkhand Shramik Kalyan Samiti - Building Safer Mining Communities",
+    url: "https://jskstrust.org",
+    title: "JSKS Trust - Jharkhand Shramik Kalyan Samiti | Donate for Mining Workers Welfare",
     description:
-      "Technology-driven compliance and welfare trust for mining sector in Jharkhand, India. Empowering workers through education, healthcare, and sustainable development.",
-    siteName: "Jharkhand Shramik Kalyan Samiti",
+      "Leading mining welfare NGO in Jharkhand. JSKS Trust provides CSR programs, worker safety, health camps, and compliance solutions. NGO DARPAN: JH/2025/0615181. Donate Now!",
+    siteName: "JSKS Trust - Jharkhand Shramik Kalyan Samiti",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logo.jpg",
         width: 1200,
         height: 630,
-        alt: "Jharkhand Shramik Kalyan Samiti - Mining Welfare Trust",
+        alt: "JSKS Trust Logo - Jharkhand Shramik Kalyan Samiti",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jharkhand Shramik Kalyan Samiti - Mining Welfare Trust",
+    title: "JSKS Trust - Mining Welfare NGO Jharkhand | Donate Now",
     description:
-      "Technology-driven compliance and welfare programs for mining sector workers in Jharkhand, India.",
-    images: ["/twitter-image.jpg"],
+      "Leading NGO for mining sector workers welfare in Jharkhand. CSR programs, health camps, worker safety. NGO DARPAN: JH/2025/0615181. Donate Today!",
+    images: ["/logo.jpg"],
     creator: "@jskstrust",
   },
   robots: {
@@ -108,6 +115,14 @@ export default function RootLayout({
             __html: JSON.stringify(organizationSchema),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
+          }}
+        />
+        <link rel="canonical" href="https://jskstrust.org" />
+        <meta name="google-site-verification" content="your-verification-code" />
       </head>
       <body className={manrope.variable}>
         <a href="#main" className="sr-only">
