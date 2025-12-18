@@ -20,6 +20,18 @@ const team = [
     expertise: "15+ years in mining compliance, environmental policy, and NGO leadership.",
     image: "/Neelima Tripathi - President.png"
   },
+   {
+    name: "Sajjad Ansari",
+    role: "Vice President",
+    expertise: "Technology and digital transformation in social sector.",
+    image: "/Sajjad Ansari - Vice President.png"
+  },
+   {
+    name: "Mtiaz Khan",
+    role: "Secretary cum Treasurer",
+    expertise: "Financial management, compliance, and administrative oversight.",
+    image: "/Mtiaz Ali - Secretary Cum. Treasurer.png"
+  },
   {
     name: "Upendra Nath Pathak",
     role: "Trustee",
@@ -43,19 +55,9 @@ const team = [
     role: "Trustee",
     expertise: "Environmental scientist and conservation program manager.",
     image: "/Lalbabu Yadav - Trustee.png"
-  },
-  {
-    name: "Sajjad Ansari",
-    role: "Vice President",
-    expertise: "Technology and digital transformation in social sector.",
-    image: "/Sajjad Ansari - Vice President.png"
-  },
-  {
-    name: "Mtiaz Khan",
-    role: "Secretary cum Treasurer",
-    expertise: "Financial management, compliance, and administrative oversight.",
-    image: "/Mtiaz Ali - Secretary Cum. Treasurer.png"
   }
+ 
+ 
 ];
 
 export default function Team() {
@@ -74,8 +76,9 @@ export default function Team() {
       {/* Team Grid */}
       <Section className="bg-gradient-to-b from-white via-sky/10 to-white">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member, idx) => (
+          {/* Leadership - 3 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+            {team.slice(0, 3).map((member, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
@@ -91,7 +94,43 @@ export default function Team() {
                       alt={member.name}
                       fill
                       className="object-cover hover:scale-110 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></div>
+                  </div>
+                  <CardHeader className="relative -mt-16 z-10">
+                    <div className="mb-2">
+                      <h3 className="text-xl font-bold text-white drop-shadow-lg">{member.name}</h3>
+                      <p className="text-sm font-bold bg-gradient-to-r from-amber to-yellow-400 bg-clip-text text-transparent">{member.role}</p>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pt-2">
+                    <p className="text-slate text-sm leading-relaxed">{member.expertise}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Trustees - 4 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.slice(3).map((member, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <Card hover className="overflow-hidden h-full bg-gradient-to-br from-white to-sky/5">
+                  <div className="relative w-full h-72 bg-gradient-to-br from-moss to-amber overflow-hidden">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover hover:scale-110 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent"></div>
                   </div>
